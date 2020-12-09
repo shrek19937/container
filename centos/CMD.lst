@@ -1,0 +1,9 @@
+  745  mkdir centos
+  746  cd centos/
+  748  docker pull centos
+  752  docker run -i -t centos
+  767  docker commit 40553c0c4549 centos-nc
+  769  docker commit help
+  770  docker commit -h
+  775  history | grep commit
+  776  history | grep commit >>CMD.lst 

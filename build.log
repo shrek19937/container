@@ -1,0 +1,27 @@
+shrek@shrek-ThinkPad-T61:~/work/container$ docker build .
+Sending build context to Docker daemon  2.048kB
+Step 1/4 : FROM python
+latest: Pulling from library/python
+756975cb9c7e: Pull complete
+d77915b4e630: Pull complete
+5f37a0a41b6b: Pull complete
+96b2c1e36db5: Pull complete
+c495e8de12d2: Pull complete
+33382189822a: Pull complete
+414ebfa5f45b: Pull complete
+dd860911922e: Pull complete
+b434dcf770b1: Pull complete
+Digest: sha256:387f88e770ef8bbce23e57bc7627f71bde1d32888b3f08a857308444c3d29226
+Status: Downloaded newer image for python:latest
+ ---> 0affb4652fc0
+Step 2/4 : COPY . /public
+ ---> 2489dbc83293
+Step 3/4 : WORKDIR /public
+ ---> Running in 545a2fdbbada
+Removing intermediate container 545a2fdbbada
+ ---> 31ebd15a1473
+Step 4/4 : ENTRYPOINT ["python3", "-m", "http.server"]
+ ---> Running in 28292b0e3a08
+Removing intermediate container 28292b0e3a08
+ ---> abbf34a9cd61
+Successfully built abbf34a9cd61
